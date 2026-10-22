@@ -1,5 +1,53 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><title>DJ C</title></head>
-<body><h1>DJ C 的小站</h1><p>建设中，敬请期待。</p></body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DJ C 的小站</title>
+<style>
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin: 0; background: #faf7f2; color: #222; }
+  header { text-align: center; padding: 48px 16px 8px; }
+  header h1 { margin: 0 0 8px; font-size: 28px; }
+  header p { margin: 0; color: #777; }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
+  h2 { font-size: 20px; border-left: 4px solid #3b82f6; padding-left: 10px; }
+  .desc { color: #555; line-height: 1.7; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 16px; }
+  figure { margin: 0; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+  figure img { width: 100%; display: block; }
+  figcaption { padding: 10px 14px; font-size: 14px; color: #444; }
+  figcaption b { color: #111; }
+  .wide img { width: 100%; border-radius: 12px; display: block; }
+  footer { text-align: center; color: #999; font-size: 13px; padding: 24px 0 40px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>DJ C 的小站</h1>
+  <p>AI 实测 · 副业记录 · 项目展示</p>
+</header>
+<main>
+  <h2>AI 换脸「锁脸」实测</h2>
+  <p class="desc">同一个角色、同一张源脸，在三个场景里逐帧验证脸部一致性。相似度距离越低，锁脸越稳（与源脸的特征距离）。结论：窗边自然光最稳，街景夜景最容易崩。</p>
+  <div class="grid">
+    <figure>
+      <img src="window.jpg" alt="窗边自然光场景">
+      <figcaption><b>窗边自然光</b> · 距离 0.507 · 最佳</figcaption>
+    </figure>
+    <figure>
+      <img src="cafe.jpg" alt="咖啡馆暖光场景">
+      <figcaption><b>咖啡馆暖光</b> · 距离 0.549 · 良好</figcaption>
+    </figure>
+    <figure>
+      <img src="street.jpg" alt="街景夜景场景">
+      <figcaption><b>街景夜景</b> · 距离 0.635 · 最弱</figcaption>
+    </figure>
+  </div>
+  <h2 style="margin-top:36px;">三场景对比总览</h2>
+  <div class="wide">
+    <img src="compare.jpg" alt="锁脸测试三场景对比图">
+  </div>
+</main>
+<footer>DJ C · 用数据说话，不卖课</footer>
+</body>
 </html>
